@@ -1,10 +1,10 @@
 <!-- MASTER PAGES -->
 <% layout('layout/main') -%>
 
-<head>
-    <script src="socket.io/socket.io.js"></script>
-    <script src="js/socketFrontEnd.js"></script>
-</head>
+
+<script defer src="socket.io/socket.io.js"></script>
+<script src="js/functions.js"></script>
+<script defer src="js/socketFrontEnd.js"></script>
 
 <div class="container" style="margin-bottom: 30px;">
     <div class="row">
@@ -16,12 +16,26 @@
     </div>
     <div class="row chat">
         <div class="col-md-3">
-            <div class="divUsuarios text-center">
-                <h3>Usuarios Online</h3>
-
+            <div class="divUsuarios">
+                <div class="divTitleUsers text-center">
+                    <h4>Usuarios Online</h4>
+                </div>
+                <ul>
+                    <li>
+                        <div class="profile">
+                            <div class="picture">
+                                <img src="img/profile.png" alt="" class="rounded-circle" width="50" height="50">
+                            </div>
+                            <div class="userInfo">
+                                <span>Goku</span><br>
+                                <span>ONLINE</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="col-md-9">
+        <div class="col-md-9" style="margin-bottom: 30px;">
             <div class="divChat">
                 <h3>users</h3>
                 <h3>users</h3>
@@ -32,12 +46,12 @@
                 <h3>users</h3>
                 <h3>users</h3>
             </div>
-            <div class="row">
-                <div class="col-md-10">
+            <div class="grid">
+                <div>
                     <textarea name="" id="txtMsj" cols="30" class="form-control"
                         placeholder="Escribetu mensaje"></textarea>
                 </div>
-                <div class="col-md-2">
+                <div id="btn">
                     <button class="btn btn-success form-control" id="btnEnviar">ENVIAR</button>
                 </div>
             </div>

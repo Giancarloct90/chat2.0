@@ -5,7 +5,7 @@ class Usuarios {
 
     // TO ADD USERS
     agergarUsuarios(id, nombre) {
-        this.usuarios({
+        this.usuarios.push({
             id,
             nombre
         });
@@ -14,7 +14,7 @@ class Usuarios {
 
     // GET ONE USER
     getUsuario(id) {
-        let usuario = this.usuarios.filter(usuario => usuario.id === id);
+        let usuario = this.usuarios.filter(usuario => usuario.id === id)[0];
         return usuario;
     }
 
@@ -26,7 +26,7 @@ class Usuarios {
     // DELETE USERS
     borrarUsuario(id) {
         let usuarioBorrado = this.getUsuario(id);
-        let usuarios = this.usuarios.filter(usuario => usuario.id != id);
+        this.usuarios = this.usuarios.filter(usuario => usuario.id != id);
         return usuarioBorrado;
     }
 }

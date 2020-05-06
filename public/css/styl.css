@@ -45,13 +45,27 @@ body {
     height: 90px;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+#btn {
+    margin-left: 10px;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
 @media (max-width: 420px) {
     .divUsuarios {
         display: none;
     }
 
     .divChat {
-        height: 450px;
+        height: 550px;
     }
 
     #txtMsj {
@@ -62,5 +76,19 @@ body {
     #btnEnviar {
         height: 60px;
         width: 30px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 70% 10%;
+    }
+
+    #txtMsj {
+        width: auto;
+    }
+
+
+    #btnEnviar {
+        width: 90px;
     }
 }

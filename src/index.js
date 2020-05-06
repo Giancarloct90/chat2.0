@@ -20,12 +20,13 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 
-// ROUTES
-app.use(require('./routes/index'));
 
 // SOCKET CONFIG
 module.exports.io = socketIO(server);
 require('./socket/socketBackEnd');
+
+// ROUTES
+app.use(require('./routes/index'));
 
 app.get('/', (req, res) => {
     res.render('home');

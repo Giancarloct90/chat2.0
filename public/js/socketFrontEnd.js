@@ -7,15 +7,16 @@ if (!params.get('nombre')) {
 }
 
 var usuario = {
-    nombre = params.get('nombre')
+    nombre: params.get('nombre')
 }
 
-socket = io();
+const socket = io();
 
 // ESPERANDO CONECTARSE CON EL SERVER
 socket.on('connect', function () {
+    console.log('Connect server');
     socket.emit('entrarChat', usuario, function (resp) {
-
+        console.log(resp);
     });
 });
 
@@ -26,6 +27,7 @@ socket.on('disconnect', function () {
 
 // LISTAR Y RENDERIZAR LISTA DE USUARIOS
 socket.on('listarUsuarios', function (resp) {
+    console.log('Usuarios online');
     console.log(resp);
 });
 
