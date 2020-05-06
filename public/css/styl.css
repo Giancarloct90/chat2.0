@@ -18,3 +18,49 @@ body {
     width: 400px;
     height: 260px;
 }
+
+.divTitle {
+    margin: auto;
+    margin-top: 3%;
+
+}
+
+.divUsuarios,
+.divChat {
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.divUsuarios {
+    height: 800px;
+}
+
+.divChat {
+    height: 680px;
+}
+
+#txtMsj,
+#btnEnviar {
+    height: 90px;
+}
+
+@media (max-width: 420px) {
+    .divUsuarios {
+        display: none;
+    }
+
+    .divChat {
+        height: 450px;
+    }
+
+    #txtMsj {
+        height: 60px;
+        width: 100px;
+    }
+
+    #btnEnviar {
+        height: 60px;
+        width: 30px;
+    }
+}

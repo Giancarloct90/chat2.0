@@ -2,16 +2,17 @@
 <% layout('layout/main') -%>
 
 <head>
-
+    <script defer src="js/home.js"></script>
 </head>
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
             <div class="divRegitro text-center">
                 <h1 class="mb-5">Registro</h1>
-                <input type="text" placeholder="Nombre de usuario" class="form-control mb-3" required
+                <input id="txtNombre" type="text" placeholder="Nombre de usuario" class="form-control mb-3" required
                     autocomplete="off">
-                <button class="btn btn-primary form-control mb-3">Ingresar</button>
+                <label for="" id="lblNorify" style="display: none; color: red;" class="mb-3"></label>
+                <button id="btnIngresar" class="btn btn-primary form-control mb-3">Ingresar</button>
             </div>
         </div>
     </div>

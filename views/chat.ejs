@@ -1,0 +1,46 @@
+<!-- MASTER PAGES -->
+<% layout('layout/main') -%>
+
+<head>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="js/socketFrontEnd.js"></script>
+</head>
+
+<div class="container" style="margin-bottom: 30px;">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="divTitle text-center">
+                <h1>Super Chat</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row chat">
+        <div class="col-md-3">
+            <div class="divUsuarios text-center">
+                <h3>Usuarios Online</h3>
+
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="divChat">
+                <h3>users</h3>
+                <h3>users</h3>
+                <h3>users</h3>
+                <h3>users</h3>
+                <h3>users</h3>
+                <h3>users</h3>
+                <h3>users</h3>
+                <h3>users</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-10">
+                    <textarea name="" id="txtMsj" cols="30" class="form-control"
+                        placeholder="Escribetu mensaje"></textarea>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-success form-control" id="btnEnviar">ENVIAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
