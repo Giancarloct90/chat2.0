@@ -3,55 +3,66 @@
 
 
 <script defer src="socket.io/socket.io.js"></script>
-<script src="js/functions.js"></script>
+<script defer src="js/functions.js"></script>
 <script defer src="js/socketFrontEnd.js"></script>
+
+
 
 <div class="container" style="margin-bottom: 30px;">
     <div class="row">
         <div class="col-md-12">
             <div class="divTitle text-center">
-                <h1>Super Chat</h1>
+                <span id="title">Super Chat</span>
             </div>
         </div>
     </div>
     <div class="row chat">
         <div class="col-md-3">
             <div class="divUsuarios">
-                <div class="divTitleUsers text-center">
-                    <h4>Usuarios Online</h4>
+                <div class="divTitleUsers text-center" style="padding-top: 10px; margin-bottom: 10px;">
+                    <span id="userTitle">Usuarios Online</span>
                 </div>
-                <ul>
-                    <li>
-                        <div class="profile">
-                            <div class="picture">
-                                <img src="img/profile.png" alt="" class="rounded-circle" width="50" height="50">
+                <div id="divUsers">
+                    <!-- <ul>
+                        <li>
+                            <div class="profile">
+                                <div id="picture">
+                                    <img src="img/profile.png" alt="" class="rounded-circle" width="50" height="50">
+                                </div>
+                                <div id="userInfo">
+                                    <span id="txtName">Goku</span><br>
+                                    <span id="txtState">ONLINE</span>
+                                </div>
                             </div>
-                            <div class="userInfo">
-                                <span>Goku</span><br>
-                                <span>ONLINE</span>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul> -->
+                </div>
             </div>
         </div>
-        <div class="col-md-9" style="margin-bottom: 30px;">
+        <div class="col-md-9">
             <div class="divChat">
-                <h3>users</h3>
-                <h3>users</h3>
-                <h3>users</h3>
-                <h3>users</h3>
-                <h3>users</h3>
-                <h3>users</h3>
-                <h3>users</h3>
-                <h3>users</h3>
+                <ul id="ulMsj">
+                    <!-- <li>
+                        <div id="divMsj">
+                            <div id="divPic">
+                                <img src="img/profile.png" alt="" width="50" height="50">
+                            </div>
+                            <div id="divUserMsj">
+                                <div id="Msj">
+                                    <span>Mensaje Conio</span><br>
+                                    <span>13:50 pm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li> -->
+                </ul>
             </div>
             <div class="grid">
-                <div>
+                <div id="divTxtMsj">
                     <textarea name="" id="txtMsj" cols="30" class="form-control"
                         placeholder="Escribetu mensaje"></textarea>
                 </div>
-                <div id="btn">
+                <div id="divBtn">
                     <button class="btn btn-success form-control" id="btnEnviar">ENVIAR</button>
                 </div>
             </div>

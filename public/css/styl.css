@@ -27,7 +27,7 @@ body {
 
 .divUsuarios,
 .divChat {
-    background-color: white;
+    background-color: #EBFFFB;
     border-radius: 10px;
     margin-bottom: 30px;
 }
@@ -50,16 +50,86 @@ body {
     grid-template-columns: 80% 20%;
 }
 
-#btn {
+#divBtn {
     margin-left: 10px;
 }
 
 .profile {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 30% 70%;
+}
+
+#userInfo {}
+
+#picture {
+    margin-left: 10px;
+}
+
+#title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 52px;
+    color: #F22738;
+}
+
+#txtState {
+    color: #93CCA7;
+    font-size: 15px;
+}
+
+#txtName {
+    font-size: 20px;
+    color: #114859;
+}
+
+#userTitle {
+    font-family: 'Press Start 2P', cursive;
+    color: #F22738;
+    font-size: 15px;
+
+}
+
+#txtMsj {
+    background-color: #EBFFFB;
+}
+
+img {
+    border-radius: 50%;
+}
+
+#divUsers :hover {
+    background-color: #CAE7E8;
+    cursor: pointer;
+
+}
+
+#divMsj {
+    display: grid;
+    grid-template-columns: 8% 92%;
+}
+
+#divUserMsj {
+    background-color: #CAE7E8;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+.divChat {
+    padding: 20px;
 }
 
 @media (max-width: 420px) {
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
     .divUsuarios {
         display: none;
     }
@@ -80,15 +150,28 @@ body {
 
     .grid {
         display: grid;
-        grid-template-columns: 70% 10%;
+        grid-template-columns: 70% 30%;
     }
 
     #txtMsj {
-        width: auto;
+        width: 100%;
     }
 
 
     #btnEnviar {
-        width: 90px;
+        width: 100%;
+    }
+
+    #divTxtMsj {}
+
+    #divBtn {
+        margin-left: 10px;
+
+    }
+
+    #title {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 32px;
+        color: #F22738;
     }
 }

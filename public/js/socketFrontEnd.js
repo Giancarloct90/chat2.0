@@ -17,6 +17,7 @@ socket.on('connect', function () {
     console.log('Connect server');
     socket.emit('entrarChat', usuario, function (resp) {
         console.log(resp);
+        renderizarUsuarios(resp);
     });
 });
 
@@ -27,8 +28,7 @@ socket.on('disconnect', function () {
 
 // LISTAR Y RENDERIZAR LISTA DE USUARIOS
 socket.on('listarUsuarios', function (resp) {
-    console.log('Usuarios online');
-    console.log(resp);
+    renderizarUsuarios(resp);
 });
 
 // ONTENER EL MSJ
