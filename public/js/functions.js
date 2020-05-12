@@ -1,6 +1,8 @@
 // VAR/SELECTOR
 const divUsers = document.getElementById('divUsers');
 const ulMsj = document.getElementById('ulMsj');
+const divUserMsj = document.getElementById('divUserMsj');
+const liMsj = document.getElementById('liMsj');
 
 // EVENTSLISTENER
 
@@ -26,16 +28,24 @@ function renderizarUsuarios(data) {
 }
 
 
-function renderizarMensaje(data) {
-    let li = document.createElement("li");
+function renderizarMensaje(data, flag) {
+
     let html = '';
     let fecha = new Date(data.fecha);
-    let hora = `${fecha.getHours()} : ${fecha.getMinutes()}`;
-    html += `<li>`;
+    let hora = `${fecha.getHours()}:${fecha.getMinutes()}`;
+
+    li = document.createElement('li');
+    li.setAttribute("id", "liMsj");
+    li.classList.add('mb-2');
     html += `<div id="divMsj">`;
     html += `<div id="divPic">`;
     html += `<img src="img/profile.png" alt="" width="50" height="50">`;
     html += `</div>`;
+    if (flag) {
+        li.style.position = 'absolute';
+        li.style.right = 0;
+        html += `<div id="divUserMsj" style="background-color: #1695A3;>`;
+    }
     html += `<div id="divUserMsj">`;
     html += `<div id="Msj">`;
     html += `<span>${data.nombre}</span><br>`;
@@ -44,8 +54,6 @@ function renderizarMensaje(data) {
     html += `</div>`;
     html += `</div>`;
     html += `</div>`;
-    html += `</li>`;
     li.innerHTML = html;
     ulMsj.appendChild(li);
-
 }

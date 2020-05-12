@@ -28,4 +28,11 @@ io.on('connection', (client) => {
         client.broadcast.emit('crearMensaje', crearMensaje('Admin', `${usuarioBorrada.nombre} abandono el chat`));
         client.broadcast.emit('listarUsuarios', usuarios.getUsuarios());
     });
+
+    // MENSAJES PRAR TODOS
+    client.on('crearMensaje', (data, fnCallback) => {
+        let persona = usuarios.getUsuario(client.id);
+        client.broadcast.emit('crearMensaje', crearMensaje(persona.nombre, data));
+        fnCallback(crearMensaje(persona.nombre, data), true);
+    });
 });
