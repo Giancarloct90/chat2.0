@@ -35,6 +35,7 @@ socket.on('connect', function () {
     socket.emit('entrarChat', usuario, function (resp) {
         console.log(resp);
         renderizarUsuarios(resp);
+        scrollBottom();
     });
 });
 
@@ -51,4 +52,5 @@ socket.on('listarUsuarios', function (resp) {
 // ONTENER EL MSJ
 socket.on('crearMensaje', function (resp) {
     renderizarMensaje(resp);
+    scrollBottom();
 });
